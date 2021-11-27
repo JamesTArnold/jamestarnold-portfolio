@@ -98,21 +98,45 @@
     </div>
   </div>
 </section>
-<section>
+
+<section [attr.id]="'about'">
   <div class="bg section-2-bg"></div>
   <h1>GREAT THAT IT'S WORKING</h1>
 </section>
-<section>
+
+<section [attr.id]="'portfolio'">
   <div class="bg"></div>
   <h1>SCROLL MORE TO SEE MORE</h1>
 </section>
-<section>
+
+<section [attr.id]="'contact'" #contact>
   <div class="bg"></div>
   <h1>LOVING THE IMAGES</h1>
 </section>
-<section>
-  <div class="bg"></div>
-  <h1>NICE, RIGHT?</h1>
-</section>
 
-<button class="section-link" color="primary" mat-raised-button>ABOUT</button>
+<nav class="nav-container">
+  <button
+    [routerLink]="'.'"
+    [fragment]="'about'"
+    color="primary"
+    mat-raised-button
+  >
+    ABOUT
+  </button>
+  <button
+    [routerLink]="'.'"
+    [fragment]="'portfolio'"
+    color="primary"
+    mat-raised-button
+  >
+    PORTFOLIO
+  </button>
+  <button
+    [routerLink]="'.'"
+    [fragment]="'contact'"
+    color="primary"
+    mat-raised-button
+  >
+    CONTACT
+  </button>
+</nav>
