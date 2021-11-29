@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Scroll } from '@angular/router';
 import { gsap } from 'gsap';
-import { ScrollTrigger, TextPlugin } from 'gsap/all';
+import { ScrollTrigger, TextPlugin, ScrollToPlugin } from 'gsap/all';
 
 @Component({
   selector: 'app-home',
@@ -12,6 +13,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.initParallax();
     this.homeTimeline();
+
+    gsap.registerPlugin(ScrollTrigger);
   }
 
   private homeTimeline() {
@@ -40,6 +43,11 @@ export class HomeComponent implements OnInit {
         x: 150,
         stagger: 0.25,
       });
+    // .from('.nav-button', {
+    //   duration: 1,
+    //   opacity: 0,
+    //   y: 20,
+    // });
   }
 
   private initParallax() {
@@ -60,5 +68,10 @@ export class HomeComponent implements OnInit {
         },
       });
     });
+  }
+
+  public navButtonClicked(section: string) {
+    gsap.registerPlugin(ScrollToPlugin);
+    gsap.to(window, { scrollTo: { y: section } });
   }
 }

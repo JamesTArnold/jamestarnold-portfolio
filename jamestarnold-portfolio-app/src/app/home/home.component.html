@@ -116,26 +116,26 @@
 
 <nav class="nav-container">
   <button
-    [routerLink]="'.'"
-    [fragment]="'about'"
+    class="nav-button"
     color="primary"
     mat-raised-button
+    (click)="navButtonClicked('#about')"
   >
     ABOUT
   </button>
   <button
-    [routerLink]="'.'"
-    [fragment]="'portfolio'"
+    class="nav-button"
     color="primary"
     mat-raised-button
+    (click)="navButtonClicked('#portfolio')"
   >
     PORTFOLIO
   </button>
   <button
-    [routerLink]="'.'"
-    [fragment]="'contact'"
+    class="nav-button"
     color="primary"
     mat-raised-button
+    (click)="navButtonClicked('#contact')"
   >
     CONTACT
   </button>
