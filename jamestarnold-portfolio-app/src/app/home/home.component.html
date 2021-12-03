@@ -102,7 +102,12 @@
 <section [attr.id]="'about'">
   <div class="bg section-2-bg"></div>
   <div class="section-2-container">
-    <div class="section-2-nav">
+    <div
+      [ngClass]="{
+        'display-none section-2-nav': screenWidth > 450,
+        'section-2-container': true
+      }"
+    >
       <button
         (click)="sectionTwoButtonClick('past')"
         class="section-2-nav-button"

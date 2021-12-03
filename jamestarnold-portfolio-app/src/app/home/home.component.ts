@@ -9,14 +9,13 @@ import { ScrollTrigger, TextPlugin, ScrollToPlugin } from 'gsap/all';
 })
 export class HomeComponent implements OnInit {
   sectionTwoNav: string = '';
-  scrHeight: any;
-  scrWidth: any;
+  screenHeight: any;
+  screenWidth: any;
 
   @HostListener('window:resize', ['$event'])
   getScreenSize(event?: any) {
-    this.scrHeight = window.innerHeight;
-    this.scrWidth = window.innerWidth;
-    console.log(this.scrHeight, this.scrHeight);
+    this.screenHeight = window.innerHeight;
+    this.screenWidth = window.innerWidth;
   }
 
   constructor() {}
@@ -27,7 +26,7 @@ export class HomeComponent implements OnInit {
 
     gsap.registerPlugin(ScrollTrigger);
 
-    if (this.scrWidth < 767) {
+    if (this.screenWidth < 450) {
       gsap.from('.section-2-nav-button', {
         duration: 1,
         opacity: 0,
@@ -35,8 +34,10 @@ export class HomeComponent implements OnInit {
         stagger: 0.5,
         scrollTrigger: {
           trigger: '#about',
-          start: 'top center',
-          toggleActions: 'restart none none none restart',
+          start: '930px center',
+          end: '+=900',
+          // markers: true,
+          toggleActions: 'play restart restart play',
         },
       });
     } else {
@@ -47,8 +48,10 @@ export class HomeComponent implements OnInit {
         stagger: 0.5,
         scrollTrigger: {
           trigger: '#about',
-          start: 'top center',
-          toggleActions: 'restart none none none restart',
+          start: '1900px center',
+          end: '+=900',
+          // markers: true,
+          toggleActions: 'play restart restart play',
         },
       });
     }
@@ -116,13 +119,29 @@ export class HomeComponent implements OnInit {
   }
 
   public sectionTwoButtonClick(navTo: string) {
-    this.sectionTwoNav = navTo;
+    let inOutTimeLine = gsap.timeline();
+    if (this.sectionTwoNav !== '') {
+      this.sectionTwoNav = navTo;
+      inOutTimeLine
+        .to('.section-2-article', {
+          duration: 0.2,
+          opacity: 0,
+          scale: 0.1,
+        })
+        .to('.section-2-article', {
+          duration: 0.2,
+          opacity: 1,
+          scale: 1,
+        });
+    } else {
+      this.sectionTwoNav = navTo;
 
-    gsap.from('.section-2-article', {
-      duration: 1,
-      ease: 'power3',
-      opacity: 0,
-      scale: 0.1,
-    });
+      gsap.from('.section-2-article', {
+        duration: 1,
+        ease: 'power3',
+        opacity: 0,
+        scale: 0.1,
+      });
+    }
   }
 }

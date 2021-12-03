@@ -7,6 +7,10 @@ section {
   justify-content: center;
 }
 
+.display-none {
+  display: none;
+}
+
 .bg {
   position: absolute;
   top: 0;
@@ -42,7 +46,7 @@ section {
   &-title {
     &-container {
       display: grid;
-      grid: 150px 150px auto/675px;
+      grid: 150px 150px auto/1fr;
       justify-items: center;
       align-items: center;
     }
@@ -78,7 +82,7 @@ section {
 
     @media only screen and (max-width: 767px) {
       display: grid;
-      grid: 100px 1fr / auto;
+      grid: 225px 1fr / auto;
       // justify-items: center;
     }
   }
@@ -88,11 +92,11 @@ section {
     row-gap: 50px;
     align-items: center;
 
-    @media only screen and (max-width: 767px) {
-      display: grid;
-      grid: 1fr/ 1fr 1fr 1fr;
-      justify-items: center;
-    }
+    // @media only screen and (max-width: 767px) {
+    //   display: grid;
+    //   grid: 1fr/ 1fr 1fr 1fr;
+    //   justify-items: center;
+    // }
   }
   &-article {
     width: 60vw;
