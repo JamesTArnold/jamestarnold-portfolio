@@ -101,7 +101,68 @@
 
 <section [attr.id]="'about'">
   <div class="bg section-2-bg"></div>
-  <h1>GREAT THAT IT'S WORKING</h1>
+  <div class="section-2-container">
+    <div class="section-2-nav">
+      <button
+        (click)="sectionTwoButtonClick('past')"
+        class="section-2-nav-button"
+        mat-raised-button
+        color="accent"
+      >
+        WHERE I'M FROM
+      </button>
+      <button
+        (click)="sectionTwoButtonClick('present')"
+        class="section-2-nav-button"
+        mat-raised-button
+        color="accent"
+      >
+        WHERE I AM
+      </button>
+      <button
+        (click)="sectionTwoButtonClick('future')"
+        class="section-2-nav-button"
+        mat-raised-button
+        color="accent"
+      >
+        WHERE I'M GOING
+      </button>
+    </div>
+    <mat-card
+      [ngClass]="{
+        'section-2-article-off': sectionTwoNav === '',
+        'section-2-article': true
+      }"
+    >
+      <article *ngIf="sectionTwoNav === 'past'">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </article>
+      <article *ngIf="sectionTwoNav === 'present'">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </article>
+      <article *ngIf="sectionTwoNav === 'future'">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </article>
+    </mat-card>
+  </div>
 </section>
 
 <section [attr.id]="'portfolio'">
