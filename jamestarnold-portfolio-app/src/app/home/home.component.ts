@@ -48,9 +48,10 @@ export class HomeComponent implements OnInit {
         stagger: 0.5,
         scrollTrigger: {
           trigger: '#about',
-          start: '1900px center',
-          end: '+=900',
-          // markers: true,
+          start: `25% ${innerHeight/ 4}px`,
+
+          end: '+=400',
+          markers: true,
           toggleActions: 'play restart restart play',
         },
       });
