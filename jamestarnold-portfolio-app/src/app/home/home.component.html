@@ -6,7 +6,7 @@
         src="assets\images\introPhoto.jpg"
         title="Firebase"
         alt="Firebase Logo"
-        height="350"
+        height="250"
         class="ng-star-inserted"
       />
     </div>
@@ -103,10 +103,10 @@
   <div class="bg section-2-bg"></div>
   <div class="section-2-container">
     <div
-      [ngClass]="{
-        'display-none section-2-nav': screenWidth > 450,
-        'section-2-container': true
-      }"
+      Class="
+        section-2-nav
+        section-2-container
+      "
     >
       <button
         (click)="sectionTwoButtonClick('past')"
@@ -172,12 +172,44 @@
 
 <section [attr.id]="'portfolio'">
   <div class="bg"></div>
-  <h1>SCROLL MORE TO SEE MORE</h1>
+  <div class="section-3-container">
+    <h1>Portfolio</h1>
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          Angular-Kanban
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        A simple Project Management created with Angular and a Firebase backend.
+      </mat-card-content>
+    </mat-card>
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          React-Todo
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        A simple Task app to showcase my Angular and firebase skills.
+      </mat-card-content>
+    </mat-card>
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          Vue-Todo
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        A simple Task app to showcase my Angular and firebase skills.
+      </mat-card-content>
+    </mat-card>
+  </div>
 </section>
 
 <section [attr.id]="'contact'" #contact>
   <div class="bg"></div>
-  <h1>LOVING THE IMAGES</h1>
+  <div class=''></div>
 </section>
 
 <nav class="nav-container">

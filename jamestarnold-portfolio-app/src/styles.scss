@@ -1,9 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-body {
-  margin: 0 !important;
-  scrollbar-width: none; /* Firefox */
-  overflow-x: hidden;
-}
 
 body::-webkit-scrollbar {
   display: none;
@@ -12,5 +7,8 @@ body::-webkit-scrollbar {
 html,
 body {
   margin: 0;
+
+  // scrollbar-width: none; /* Firefox */
+  overflow-x: hidden;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }

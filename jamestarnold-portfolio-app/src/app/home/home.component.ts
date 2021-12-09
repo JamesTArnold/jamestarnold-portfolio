@@ -23,7 +23,10 @@ export class HomeComponent implements OnInit {
     this.initParallax();
     this.homeTimeline();
     this.initNavigation();
+    this.initPageScrollTrigger();
+  }
 
+  private initPageScrollTrigger() {
     gsap.registerPlugin(ScrollTrigger);
 
     if (this.screenWidth < 450) {
@@ -48,10 +51,9 @@ export class HomeComponent implements OnInit {
         stagger: 0.5,
         scrollTrigger: {
           trigger: '#about',
-          start: `25% ${innerHeight/ 4}px`,
-
-          end: '+=400',
-          markers: true,
+          start: `25% ${innerHeight / 4}px`,
+          end: `50% ${innerHeight / 4} px`,
+          // markers: true,
           toggleActions: 'play restart restart play',
         },
       });
