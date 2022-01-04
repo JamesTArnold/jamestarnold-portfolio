@@ -3,11 +3,11 @@
   <div class="section-1-title-container">
     <div class="section-1-title-photo">
       <img
+        class="section-1-title-img"
         src="assets\images\introPhoto.jpg"
         title="Firebase"
         alt="Firebase Logo"
         height="250"
-        class="ng-star-inserted"
       />
     </div>
     <h1 class="section-1-greeting-text">Hello, I'm James</h1>
@@ -17,7 +17,6 @@
           src="assets\images\logos\Angular_full_color_logo.svg"
           title="Angular"
           alt="Angular logo"
-          class="ng-star-inserted"
           width="50"
           height="50"
         />
@@ -29,7 +28,6 @@
           alt="Typescript logo"
           width="50"
           height="50"
-          class="ng-star-inserted"
         />
       </div>
 
@@ -40,7 +38,6 @@
           alt="JavaScript Logo"
           width="50"
           height="50"
-          class="ng-star-inserted"
         />
       </div>
 
@@ -52,7 +49,6 @@
           alt="HTML5 Logo"
           width="50"
           height="50"
-          class="ng-star-inserted"
         />
       </div>
 
@@ -63,7 +59,6 @@
           alt="CSS3 Logo"
           width="50"
           height="50"
-          class="ng-star-inserted"
         />
       </div>
 
@@ -74,7 +69,6 @@
           alt="Sass Logo"
           width="50"
           height="50"
-          class="ng-star-inserted"
         />
       </div>
       <div class="section-1-skillset-logo">
@@ -83,7 +77,6 @@
           title="Firebase"
           alt="Firebase Logo"
           height="50"
-          class="ng-star-inserted"
         />
       </div>
       <div class="section-1-skillset-logo">
@@ -92,7 +85,6 @@
           title="AG Grid"
           alt="AG Grid Logo"
           height="50"
-          class="ng-star-inserted"
         />
       </div>
     </div>
@@ -102,7 +94,7 @@
 <section [attr.id]="'about'">
   <div class="bg section-2-bg"></div>
   <div class="section-2-container">
-    <div
+    <!-- <div
       Class="
         section-2-nav
         section-2-container
@@ -132,14 +124,22 @@
       >
         WHERE I'M GOING
       </button>
-    </div>
-    <mat-card
-      [ngClass]="{
-        'section-2-article-off': sectionTwoNav === '',
-        'section-2-article': true
-      }"
-    >
-      <article *ngIf="sectionTwoNav === 'past'">
+    </div> -->
+    <mat-card class="section-2-article">
+      <!-- [ngClass]="{
+      'section-2-article-off': sectionTwoNav === '',
+      'section-2-article': true
+    }" -->
+      <!-- <article *ngIf="sectionTwoNav === 'past'">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </article> -->
+      <article>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -148,7 +148,7 @@
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
       </article>
-      <article *ngIf="sectionTwoNav === 'present'">
+      <!-- <article *ngIf="sectionTwoNav === 'future'">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -156,16 +156,7 @@
         velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
-      </article>
-      <article *ngIf="sectionTwoNav === 'future'">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </article>
+      </article> -->
     </mat-card>
   </div>
 </section>
@@ -176,9 +167,7 @@
     <h1>Portfolio</h1>
     <mat-card>
       <mat-card-header>
-        <mat-card-title>
-          Angular-Kanban
-        </mat-card-title>
+        <mat-card-title> Angular-Kanban </mat-card-title>
       </mat-card-header>
       <mat-card-content>
         A simple Project Management created with Angular and a Firebase backend.
@@ -186,9 +175,7 @@
     </mat-card>
     <mat-card>
       <mat-card-header>
-        <mat-card-title>
-          React-Todo
-        </mat-card-title>
+        <mat-card-title> React-Todo </mat-card-title>
       </mat-card-header>
       <mat-card-content>
         A simple Task app to showcase my Angular and firebase skills.
@@ -196,9 +183,7 @@
     </mat-card>
     <mat-card>
       <mat-card-header>
-        <mat-card-title>
-          Vue-Todo
-        </mat-card-title>
+        <mat-card-title> Vue-Todo </mat-card-title>
       </mat-card-header>
       <mat-card-content>
         A simple Task app to showcase my Angular and firebase skills.
@@ -209,7 +194,7 @@
 
 <section [attr.id]="'contact'" #contact>
   <div class="bg"></div>
-  <div class=''></div>
+  <div class=""></div>
 </section>
 
 <nav class="nav-container">

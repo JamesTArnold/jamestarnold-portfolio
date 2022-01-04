@@ -29,35 +29,35 @@ export class HomeComponent implements OnInit {
   private initPageScrollTrigger() {
     gsap.registerPlugin(ScrollTrigger);
 
-    if (this.screenWidth < 450) {
-      gsap.from('.section-2-nav-button', {
-        duration: 1,
-        opacity: 0,
-        x: -100,
-        stagger: 0.5,
-        scrollTrigger: {
-          trigger: '#about',
-          start: '930px center',
-          end: '+=900',
-          // markers: true,
-          toggleActions: 'play restart restart play',
-        },
-      });
-    } else {
-      gsap.from('.section-2-nav-button', {
-        duration: 1,
-        opacity: 0,
-        y: -50,
-        stagger: 0.5,
-        scrollTrigger: {
-          trigger: '#about',
-          start: `25% ${innerHeight / 4}px`,
-          end: `50% ${innerHeight / 4} px`,
-          // markers: true,
-          toggleActions: 'play restart restart play',
-        },
-      });
-    }
+    // if (this.screenWidth < 450) {
+    gsap.from('.section-2-article', {
+      duration: 1,
+      ease: 'power3',
+      opacity: 0,
+      scale: 0.1,
+      scrollTrigger: {
+        trigger: '#about',
+        start: '1600px center',
+        end: '+=1200',
+        // markers: true,
+        toggleActions: 'play none none none',
+      },
+    });
+    // } else {
+    //   gsap.from('.section-2-card', {
+    //     duration: 1,
+    //     opacity: 0,
+    //     y: -50,
+    //     stagger: 0.5,
+    //     scrollTrigger: {
+    //       trigger: '#about',
+    //       start: `25% ${innerHeight / 4}px`,
+    //       end: `50% ${innerHeight / 4} px`,
+    //       // markers: true,
+    //       toggleActions: 'play restart restart play',
+    //     },
+    //   });
+    // }
   }
 
   private initNavigation() {
@@ -101,7 +101,30 @@ export class HomeComponent implements OnInit {
 
     gsap.utils.toArray('section').forEach((section: any, i) => {
       section.bg = section.querySelector('.bg');
-      section.bg.style.backgroundImage = `url(https://picsum.photos/${innerWidth}/${innerHeight}?random=${i})`;
+      // section.bg.style.backgroundImage = `url(https://picsum.photos/${innerWidth}/${innerHeight}?random=${i})`;
+
+      switch (i) {
+        case 0:
+          section.bg.style.backgroundImage = `url(https://picsum.photos/id/765/${innerWidth}/${innerHeight})`;
+          //60 765 769
+
+          break;
+        case 1:
+          section.bg.style.backgroundImage = `url(https://picsum.photos/id/337/${innerWidth}/${innerHeight})`;
+          //165 337
+          break;
+        case 2:
+          section.bg.style.backgroundImage = `url(https://picsum.photos/id/358/${innerWidth}/${innerHeight})`;
+          //307 358 366
+          break;
+        case 3:
+          section.bg.style.backgroundImage = `url(https://picsum.photos/id/42/${innerWidth}/${innerHeight})`;
+          //4
+          break;
+
+        default:
+          break;
+      }
 
       section.bg.style.backgroundPosition = `50% ${-innerHeight / 2}px`;
 
@@ -121,30 +144,30 @@ export class HomeComponent implements OnInit {
     gsap.to(window, { scrollTo: { y: section } });
   }
 
-  public sectionTwoButtonClick(navTo: string) {
-    let inOutTimeLine = gsap.timeline();
-    if (this.sectionTwoNav !== '') {
-      this.sectionTwoNav = navTo;
-      inOutTimeLine
-        .to('.section-2-article', {
-          duration: 0.2,
-          opacity: 0,
-          scale: 0.1,
-        })
-        .to('.section-2-article', {
-          duration: 0.2,
-          opacity: 1,
-          scale: 1,
-        });
-    } else {
-      this.sectionTwoNav = navTo;
+  // public sectionTwoButtonClick(navTo: string) {
+  //   let inOutTimeLine = gsap.timeline();
+  //   if (this.sectionTwoNav !== '') {
+  //     this.sectionTwoNav = navTo;
+  //     inOutTimeLine
+  //       .to('.section-2-article', {
+  //         duration: 0.2,
+  //         opacity: 0,
+  //         scale: 0.1,
+  //       })
+  //       .to('.section-2-article', {
+  //         duration: 0.2,
+  //         opacity: 1,
+  //         scale: 1,
+  //       });
+  //   } else {
+  //     this.sectionTwoNav = navTo;
 
-      gsap.from('.section-2-article', {
-        duration: 1,
-        ease: 'power3',
-        opacity: 0,
-        scale: 0.1,
-      });
-    }
-  }
+  //     gsap.from('.section-2-article', {
+  //       duration: 1,
+  //       ease: 'power3',
+  //       opacity: 0,
+  //       scale: 0.1,
+  //     });
+  //   }
+  // }
 }
