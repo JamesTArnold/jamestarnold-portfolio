@@ -5,9 +5,7 @@
       <img
         class="section-1-title-img"
         src="assets\images\introPhoto.jpg"
-        title="Firebase"
-        alt="Firebase Logo"
-        height="250"
+        height="450"
       />
     </div>
     <h1 class="section-1-greeting-text">Hello, I'm James</h1>
@@ -266,7 +264,34 @@
 
 <section [attr.id]="'contact'" #contact>
   <div class="bg"></div>
-  <div class=""></div>
+  <div class="section-4-container">
+    <mat-card class="section-4-card">
+      <mat-card-title
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+        "
+        ><img width="310" src="../../assets/images/contactMePhoto.jpg" />
+      </mat-card-title>
+      <mat-card-content>
+        <button mat-flat-button>
+          <a
+            href="mailto:james@jamestarnold.dev"
+            style="text-decoration: none; color: white"
+          >
+            james@jamestarnold.dev
+          </a>
+        </button>
+        <button
+          mat-flat-button
+          (click)="goToLink('https://github.com/JamesTArnold')"
+        >
+          GITHUB
+        </button>
+      </mat-card-content>
+    </mat-card>
+  </div>
 </section>
 
 <nav class="nav-container">
