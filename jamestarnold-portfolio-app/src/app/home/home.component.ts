@@ -144,6 +144,10 @@ export class HomeComponent implements OnInit {
     gsap.to(window, { scrollTo: { y: section } });
   }
 
+  public goToLink(url: string) {
+    window.open(url, '_blank');
+  }
+
   // public sectionTwoButtonClick(navTo: string) {
   //   let inOutTimeLine = gsap.timeline();
   //   if (this.sectionTwoNav !== '') {
