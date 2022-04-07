@@ -1,4 +1,13 @@
 {
+  "targets": {
+    "portfolio-50fe3": {
+      "hosting": {
+        "jamestarnold-portfolio-app": [
+          "portfolio-50fe3"
+        ]
+      }
+    }
+  },
   "projects": {
     "default": "portfolio-50fe3"
   }

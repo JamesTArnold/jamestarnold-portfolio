@@ -108,6 +108,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "jamestarnold-portfolio-app:build:production",
+            "firebaseProject": "portfolio-50fe3",
+            "firebaseHostingSite": "portfolio-50fe3"
+          }
         }
       }
     }
