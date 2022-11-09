@@ -4,6 +4,7 @@
     <div class="section-1-title-photo">
       <img
         class="section-1-title-img"
+        alt="photo of James Arnold"
         src="assets\images\introPhoto.jpg"
         height="450"
       />
@@ -92,51 +93,7 @@
 <section [attr.id]="'about'">
   <div class="bg section-2-bg"></div>
   <div class="section-2-container">
-    <!-- <div
-      Class="
-        section-2-nav
-        section-2-container
-      "
-    >
-      <button
-        (click)="sectionTwoButtonClick('past')"
-        class="section-2-nav-button"
-        mat-raised-button
-        color="accent"
-      >
-        WHERE I'M FROM
-      </button>
-      <button
-        (click)="sectionTwoButtonClick('present')"
-        class="section-2-nav-button"
-        mat-raised-button
-        color="accent"
-      >
-        WHERE I AM
-      </button>
-      <button
-        (click)="sectionTwoButtonClick('future')"
-        class="section-2-nav-button"
-        mat-raised-button
-        color="accent"
-      >
-        WHERE I'M GOING
-      </button>
-    </div> -->
     <mat-card class="section-2-article">
-      <!-- [ngClass]="{
-      'section-2-article-off': sectionTwoNav === '',
-      'section-2-article': true
-    }" -->
-      <!-- <article *ngIf="sectionTwoNav === 'past'">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </article> -->
       <article>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -146,15 +103,6 @@
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
       </article>
-      <!-- <article *ngIf="sectionTwoNav === 'future'">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </article> -->
     </mat-card>
   </div>
 </section>
@@ -174,6 +122,7 @@
           <img
             width="275"
             height="107"
+            alt="Picture of Agile Angular website"
             src="../../assets/images/projects/angular-kanban.jpg"
           />
         </a>
@@ -199,7 +148,7 @@
         </button>
       </mat-card-actions>
     </mat-card>
-     <mat-card>
+    <mat-card>
       <mat-card-header>
         <mat-card-title> React Sales </mat-card-title>
       </mat-card-header>
@@ -208,24 +157,32 @@
           class="section-3-project-link"
           (click)="goToLink('https://react-sales.jamestarnold.dev')"
         >
-          <img width="275" height="107" src="../../assets/images/projects/react-sales.jpg" />
+          <img
+            width="275"
+            height="107"
+            alt="picture of react sales website"
+            src="../../assets/images/projects/react-sales.jpg"
+          />
         </a>
-        <article>A sales performance dashboard. <br />
-        Created with React.
+        <article>
+          A sales performance dashboard. <br />
+          Created with React.
         </article>
       </mat-card-content>
       <mat-card-actions align="end">
         <button
           mat-flat-button
           class="section-3-project-link"
-          (click)="goToLink('https://github.com/JamesTArnold/react-todo')"
+          (click)="
+            goToLink('https://github.com/JamesTArnold/React-Sales-Dashboard')
+          "
         >
           GITHUB
         </button>
         <button
           mat-flat-button
           class="section-3-project-link"
-          (click)="goToLink('https://react-todo.jamestarnold.dev')"
+          (click)="goToLink('https://react-sales.jamestarnold.dev')"
         >
           APP
         </button>
@@ -240,7 +197,11 @@
           class="section-3-project-link"
           (click)="goToLink('https://vue-todo.jamestarnold.dev')"
         >
-          <img width="200" src="../../assets/images/projects/vue-todo.png" />
+          <img
+            width="200"
+            alt="picture of vue-todo website"
+            src="../../assets/images/projects/vue-todo.png"
+          />
         </a>
         <article>A task app created with vue.</article>
       </mat-card-content>
@@ -274,7 +235,11 @@
           align-items: center;
           justify-content: space-around;
         "
-        ><img width="310" src="../../assets/images/contactMePhoto.jpg" />
+        ><img
+          width="310"
+          alt="photo of James"
+          src="../../assets/images/contactMePhoto.jpg"
+        />
       </mat-card-title>
       <mat-card-content>
         <button mat-flat-button>

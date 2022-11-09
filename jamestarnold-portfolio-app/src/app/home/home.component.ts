@@ -37,7 +37,7 @@ export class HomeComponent implements OnInit {
       scale: 0.1,
       scrollTrigger: {
         trigger: '#about',
-        start: '1600px center',
+        start: '1000px center',
         end: '+=1200',
         // markers: true,
         toggleActions: 'play none none none',
