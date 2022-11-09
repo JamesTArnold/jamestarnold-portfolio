@@ -118,6 +118,9 @@ export class HomeComponent implements OnInit {
           //307 358 366
           break;
         case 3:
+          section.bg.style.backgroundImage = `url(https://picsum.photos/id/444/${innerWidth}/${innerHeight})`;
+          break;
+        case 4:
           section.bg.style.backgroundImage = `url(https://picsum.photos/id/42/${innerWidth}/${innerHeight})`;
           //4
           break;
