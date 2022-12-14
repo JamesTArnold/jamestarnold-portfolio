@@ -1,4 +1,4 @@
-<section class="section-1">
+<section class="section-1" [attr.id]="'about'">
   <div class="section-1-bg bg"></div>
   <div class="section-1-title-container">
     <div class="section-1-title-photo">
@@ -10,7 +10,23 @@
       />
     </div>
     <h1 class="section-1-greeting-text">Hello, I'm James</h1>
-    <div class="section-1-skillset-container">
+    <div class="section-2-container">
+      <mat-card class="section-2-article">
+        <article>
+          I grew up on a farm in a small town in middle Tennessee, where I
+          developed a strong work ethic and a love for problem-solving. These
+          skills have served me well in my career as a web developer. I have a
+          passion for using technology to create innovative solutions, and I am
+          constantly learning and expanding my knowledge in this exciting field.
+          My background in farming has given me a unique perspective that I
+          bring to my work in the tech industry, and I am always looking for new
+          opportunities to use my skills and experience to make a positive
+          impact in web development. I am proud to be a part of this dynamic and
+          constantly evolving industry.
+        </article>
+      </mat-card>
+    </div>
+    <!-- <div class="section-1-skillset-container">
       <div class="section-1-skillset-logo">
         <img
           src="assets\images\logos\Angular_full_color_logo.svg"
@@ -86,11 +102,11 @@
           height="50"
         />
       </div>
-    </div>
+    </div> -->
   </div>
 </section>
 
-<section [attr.id]="'about'">
+<!-- <section>
   <div class="bg section-2-bg"></div>
   <div class="section-2-container">
     <mat-card class="section-2-article">
@@ -104,14 +120,14 @@
       </article>
     </mat-card>
   </div>
-</section>
+</section> -->
 
 <section [attr.id]="'portfolio'">
   <div class="bg"></div>
   <div class="section-3-container">
     <mat-card>
       <mat-card-header>
-        <mat-card-title> Angular Kanban </mat-card-title>
+        <mat-card-title>Agile Angular </mat-card-title>
       </mat-card-header>
       <mat-card-content class="section-3-card-content">
         <a
@@ -119,29 +135,29 @@
           class="section-3-project-link"
         >
           <img
-            width="275"
-            height="107"
+            width="325"
+            height="134"
             alt="Picture of Agile Angular website"
             src="../../assets/images/projects/angular-kanban.jpg"
           />
         </a>
         <article style="text-align: center">
-          Simple kanban board <br />
-          Created with Angular and Firebase Firestore.
+          Simple Project Tracking App<br />
+          Created with Angular and Firebase.
         </article>
       </mat-card-content>
       <mat-card-actions align="end">
         <button
           mat-flat-button
           class="section-3-project-link"
-          (click)="goToLink('https://github.com/JamesTArnold/Angular-kanban')"
+          (click)="goToLink('https://github.com/JamesTArnold/agile-angular')"
         >
           GITHUB
         </button>
         <button
           mat-flat-button
           class="section-3-project-link"
-          (click)="goToLink('https://angular-kanban.jamestarnold.dev')"
+          (click)="goToLink('https://agile-angular.jamestarnold.dev/')"
         >
           APP
         </button>
@@ -157,13 +173,13 @@
           (click)="goToLink('https://react-sales.jamestarnold.dev')"
         >
           <img
-            width="275"
-            height="107"
+            width="325"
+            height="134"
             alt="picture of react sales website"
             src="../../assets/images/projects/react-sales.jpg"
           />
         </a>
-        <article>
+        <article style="text-align: center">
           A sales performance dashboard. <br />
           Created with React.
         </article>
@@ -193,6 +209,41 @@
 <section [attr.id]="'contact'" #contact>
   <div class="bg"></div>
   <div class="section-3-container">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title> Customer List </mat-card-title>
+      </mat-card-header>
+      <mat-card-content class="section-3-card-content">
+        <a
+          class="section-3-project-link"
+          (click)="goToLink('https://customerlist-4a483.firebaseapp.com/')"
+        >
+          <img
+            width="325"
+            height="134"
+            alt="picture of vue-todo website"
+            src="../../assets/images/projects/customer-list.jpg"
+          />
+        </a>
+        <article>A table of customer data using ag-grid</article>
+      </mat-card-content>
+      <mat-card-actions align="end">
+        <button
+          mat-flat-button
+          class="section-3-project-link"
+          (click)="goToLink('https://github.com/JamesTArnold/customer-list')"
+        >
+          GITHUB
+        </button>
+        <button
+          mat-flat-button
+          class="section-3-project-link"
+          (click)="goToLink('https://customerlist-4a483.firebaseapp.com/')"
+        >
+          APP
+        </button>
+      </mat-card-actions>
+    </mat-card>
     <mat-card>
       <mat-card-header>
         <mat-card-title> Vue-Todo </mat-card-title>

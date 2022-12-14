@@ -30,19 +30,19 @@ export class HomeComponent implements OnInit {
     gsap.registerPlugin(ScrollTrigger);
 
     // if (this.screenWidth < 450) {
-    gsap.from('.section-2-article', {
-      duration: 1,
-      ease: 'power3',
-      opacity: 0,
-      scale: 0.1,
-      scrollTrigger: {
-        trigger: '#about',
-        start: '1000px center',
-        end: '+=1200',
-        // markers: true,
-        toggleActions: 'play none none none',
-      },
-    });
+    // gsap.from('.section-2-article', {
+    //   duration: 1,
+    //   ease: 'power3',
+    //   opacity: 0,
+    //   scale: 0.1,
+    //   scrollTrigger: {
+    //     trigger: '#about',
+    //     start: '1000px center',
+    //     end: '+=1200',
+    //     // markers: true,
+    //     toggleActions: 'play none none none',
+    //   },
+    // });
     // } else {
     //   gsap.from('.section-2-card', {
     //     duration: 1,
@@ -59,6 +59,7 @@ export class HomeComponent implements OnInit {
     //   });
     // }
   }
+  // biography for a front end developer with a passion for design and development of web applications  and a desire to learn new technologies and skills.
 
   private initNavigation() {
     gsap.from('.nav-button', {
@@ -82,18 +83,31 @@ export class HomeComponent implements OnInit {
         opacity: 0,
         y: 150,
       })
-      .to('.section-1-greeting-text', {
+      .from('.section-2-article', {
         duration: 1,
-        text: { value: 'Front End Developer', delimiter: ' ' },
-        delay: 1,
-        ease: 'sine',
-      })
-      .from('.section-1-skillset-logo', {
-        duration: 1,
+        ease: 'power3',
         opacity: 0,
-        x: 150,
-        stagger: 0.25,
+        scale: 0.1,
+        // scrollTrigger: {
+        //   trigger: '#about',
+        //   start: '1000px center',
+        //   end: '+=1200',
+        //   // markers: true,
+        //   toggleActions: 'play none none none',
+        // },
       });
+    // .to('.section-1-greeting-text', {
+    //   duration: 1,
+    //   text: { value: 'Front End Developer', delimiter: ' ' },
+    //   delay: 1,
+    //   ease: 'sine',
+    // })
+    // .from('.section-1-skillset-logo', {
+    //   duration: 1,
+    //   opacity: 0,
+    //   x: 150,
+    //   stagger: 0.25,
+    // });
   }
 
   private initParallax() {
@@ -117,10 +131,10 @@ export class HomeComponent implements OnInit {
           section.bg.style.backgroundImage = `url(https://picsum.photos/id/358/${innerWidth}/${innerHeight})`;
           //307 358 366
           break;
+        // case 3:
+        //   section.bg.style.backgroundImage = `url(https://picsum.photos/id/444/${innerWidth}/${innerHeight})`;
+        //   break;
         case 3:
-          section.bg.style.backgroundImage = `url(https://picsum.photos/id/444/${innerWidth}/${innerHeight})`;
-          break;
-        case 4:
           section.bg.style.backgroundImage = `url(https://picsum.photos/id/42/${innerWidth}/${innerHeight})`;
           //4
           break;
